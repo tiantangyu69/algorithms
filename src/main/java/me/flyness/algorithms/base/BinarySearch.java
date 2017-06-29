@@ -1,5 +1,6 @@
 package me.flyness.algorithms.base;
 
+import me.flyness.algorithms.Ints;
 import me.flyness.algorithms.sort.InsertionSort;
 import me.flyness.algorithms.sort.Sort;
 
@@ -10,6 +11,13 @@ import me.flyness.algorithms.sort.Sort;
 public class BinarySearch {
     private static Sort sort = new InsertionSort();
 
+    /**
+     * 使用循环实现二分查找
+     *
+     * @param key
+     * @param arr
+     * @return
+     */
     public static int index(int key, int[] arr) {
         int left = 0;
         int right = arr.length - 1;
@@ -28,14 +36,37 @@ public class BinarySearch {
         return -1;
     }
 
+    /**
+     * 使用递归实现二分查找
+     *
+     * @param key
+     * @param arr
+     * @return
+     */
+    public static int search(int key, int[] arr) {
+        return search(key, arr, 0, arr.length - 1);
+    }
+
+    public static int search(int key, int[] arr, int left, int right) {
+        if (left > right)
+            return -1;
+
+        int middle = left + (right - left) / 2;
+
+        if (key > arr[middle])
+            return search(key, arr, middle + 1, right);
+        else if (key < arr[middle])
+            return search(key, arr, left, middle - 1);
+        else
+            return middle;
+    }
+
     public static void main(String[] args) {
-        int[] arr = new int[]{1, 2, 34, 55, 66, 77, 88, 99, 100, 120, 333, 500, 678, 777, 789, 999,
-                1010, 1111, 1233, 1345, 1566, 2222, 2345, 3333, 4555, 5555, 5666, 5888, 7889, 8888,
-                8990, 9000, 9100, 10000, 10001, 10002, 10003, 10004, 10005, 10006, 10007, 10008, 11000,
-                11111, 12222, 13111, 15555, 17777, 21111, 22222, 68689, 98989, 888888, 85675675};
+        int[] arr = Ints.SORTED_INT_ARRAY;
 
         sort.sort(arr);
 
         System.out.println(index(888888, arr));
+        System.out.println(search(888888, arr));
     }
 }

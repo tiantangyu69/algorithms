@@ -1,5 +1,7 @@
 package me.flyness.algorithms.sort;
 
+import me.flyness.algorithms.Ints;
+
 /**
  * Created by lizhitao on 2017/6/3.
  * 插入排序
@@ -41,12 +43,9 @@ public class InsertionSort implements Sort {
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[]{13333, 323423422, 253, 2223, 52, 350, 24663, 42, 35, 233, 5, 235, 1, 3534, 49995, 45, 3, 64, 56, 456};
+        int[] arr = Ints.INT_ARRAY;
         new InsertionSort().sort(arr, Direction.LEFT);
 
-
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
-        }
+        Ints.printIntArray(arr);
     }
 }
