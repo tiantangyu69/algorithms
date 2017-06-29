@@ -1,4 +1,4 @@
-package me.flyness.algorithms.other;
+package me.flyness.algorithms.base;
 
 /**
  * Created by lizhitao on 2017/6/29.

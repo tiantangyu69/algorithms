@@ -1,4 +1,4 @@
-package me.flyness.algorithms.other;
+package me.flyness.algorithms.base;
 
 import me.flyness.algorithms.sort.InsertionSort;
 import me.flyness.algorithms.sort.Sort;
