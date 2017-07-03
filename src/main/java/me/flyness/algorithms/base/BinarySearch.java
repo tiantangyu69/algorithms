@@ -1,7 +1,7 @@
 package me.flyness.algorithms.base;
 
 import me.flyness.algorithms.Ints;
-import me.flyness.algorithms.sort.InsertionSort;
+import me.flyness.algorithms.sort.impl.InsertionSort;
 import me.flyness.algorithms.sort.Sort;
 
 /**

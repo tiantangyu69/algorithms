@@ -1,12 +1,13 @@
-package me.flyness.algorithms.sort;
+package me.flyness.algorithms.sort.impl;
 
-import me.flyness.algorithms.Ints;
+import me.flyness.algorithms.sort.AbstractSort;
+import me.flyness.algorithms.sort.SortUtil;
 
 /**
  * Created by lizhitao on 2017/7/3.
  * 选择排序
  */
-public class SelectionSort implements Sort {
+public class SelectionSort extends AbstractSort {
     @Override
     public void sort(int[] array) {
         int size = array.length;
@@ -23,23 +24,13 @@ public class SelectionSort implements Sort {
         }
     }
 
-    /**
-     * 交换
-     *
-     * @param array
-     * @param min
-     * @param i
-     */
-    private void exchange(int[] array, int min, int i) {
+    private void exchange(int[] array, int i, int j) {
         int tmp = array[i];
-        array[i] = array[min];
-        array[min] = tmp;
+        array[i] = array[j];
+        array[j] = tmp;
     }
 
     public static void main(String[] args) {
-        int[] arr = Ints.INT_ARRAY;
-        new SelectionSort().sort(arr);
-
-        Ints.printIntArray(arr);
+        new SortUtil(new SelectionSort()).isSorted().sort().isSorted().print();
     }
 }

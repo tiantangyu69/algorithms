@@ -1,12 +1,13 @@
-package me.flyness.algorithms.sort;
+package me.flyness.algorithms.sort.impl;
 
-import me.flyness.algorithms.Ints;
+import me.flyness.algorithms.sort.AbstractSort;
+import me.flyness.algorithms.sort.SortUtil;
 
 /**
  * Created by lizhitao on 2017/6/3.
  * 插入排序
  */
-public class InsertionSort implements Sort {
+public class InsertionSort extends AbstractSort {
 
 
     @Override
@@ -25,11 +26,7 @@ public class InsertionSort implements Sort {
         }
     }
 
-
     public static void main(String[] args) {
-        int[] arr = Ints.INT_ARRAY;
-        new InsertionSort().sort(arr);
-
-        Ints.printIntArray(arr);
+        new SortUtil(new InsertionSort()).isSorted().sort().isSorted().print();
     }
 }
