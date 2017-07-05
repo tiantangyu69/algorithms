@@ -1,7 +1,6 @@
 package me.flyness.algorithms.sort.impl;
 
 import me.flyness.algorithms.sort.AbstractSort;
-import me.flyness.algorithms.sort.SortUtil;
 
 /**
  * Created by lizhitao on 2017/7/3.
@@ -25,6 +24,6 @@ public class SelectionSort extends AbstractSort {
     }
 
     public static void main(String[] args) {
-        new SortUtil(new SelectionSort()).isSorted().sort().isSorted().print();
+        run(new SelectionSort());
     }
 }
