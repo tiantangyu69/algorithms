@@ -12,8 +12,16 @@ public class InsertionSort extends AbstractSort {
 
     @Override
     public void sort(int[] array) {
+        int size = array.length;
 
-        int j;
+        for (int i = 1; i < size; i++) {
+            for (int j = i; j > 0 && array[j] < array[j - 1]; j--) {
+                exchange(array, j, j - 1);
+            }
+        }
+
+
+        /*int j;
 
         for (int i = 1; i < array.length; i++) {
             int tmp = array[i];
@@ -23,7 +31,7 @@ public class InsertionSort extends AbstractSort {
             }
 
             array[j] = tmp;
-        }
+        }*/
     }
 
     public static void main(String[] args) {

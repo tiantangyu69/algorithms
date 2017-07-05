@@ -24,12 +24,6 @@ public class SelectionSort extends AbstractSort {
         }
     }
 
-    private void exchange(int[] array, int i, int j) {
-        int tmp = array[i];
-        array[i] = array[j];
-        array[j] = tmp;
-    }
-
     public static void main(String[] args) {
         new SortUtil(new SelectionSort()).isSorted().sort().isSorted().print();
     }

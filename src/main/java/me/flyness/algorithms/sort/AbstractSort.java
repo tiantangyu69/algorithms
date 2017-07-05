@@ -14,4 +14,12 @@ public abstract class AbstractSort implements Sort {
     public String getSortName() {
         return this.getClass().getSimpleName();
     }
+
+
+
+    protected void exchange(int[] array, int i, int j) {
+        int tmp = array[i];
+        array[i] = array[j];
+        array[j] = tmp;
+    }
 }
