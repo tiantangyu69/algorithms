@@ -25,6 +25,10 @@ public abstract class AbstractSort implements Sort {
     }
 
     protected static void run(Sort sort) {
-        new SortUtil(sort).isSorted().sort().isSorted().print();
+        run(sort, null);
+    }
+
+    protected static void run(Sort sort, int[] array) {
+        new SortUtil(sort, array).isSorted().sort().isSorted().print();
     }
 }

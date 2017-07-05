@@ -16,7 +16,10 @@ public class SortUtil {
     }
 
     public SortUtil(Sort sort, int[] array) {
-        this.array = array;
+        if (null == array)
+            this.array = Ints.INT_ARRAY;
+        else
+            this.array = array;
         this.sort = sort;
     }
 
