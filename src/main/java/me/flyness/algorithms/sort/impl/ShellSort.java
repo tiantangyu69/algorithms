@@ -9,10 +9,11 @@ import me.flyness.algorithms.sort.AbstractSort;
 public class ShellSort extends AbstractSort {
     @Override
     public void sort(int[] array) {
+        int step = 3;
         int size = array.length;
         int h = 1;
-        while (h < size / 3)
-            h = 3 * h + 1;
+        while (h < size / step)
+            h = step * h + 1;
 
         while (h >= 1) {
             for (int i = h; i < size; i++) {
@@ -21,7 +22,7 @@ public class ShellSort extends AbstractSort {
                 }
             }
 
-            h = h / 3;
+            h = h / step;
         }
     }
 
