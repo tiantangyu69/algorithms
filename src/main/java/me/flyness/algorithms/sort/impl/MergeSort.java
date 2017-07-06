@@ -3,8 +3,6 @@ package me.flyness.algorithms.sort.impl;
 import me.flyness.algorithms.Ints;
 import me.flyness.algorithms.sort.AbstractSort;
 
-import java.util.Arrays;
-
 /**
  * Created by lizhitao on 2017/7/6.
  * 归并排序
