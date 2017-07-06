@@ -14,4 +14,11 @@ public final class Ints {
             1010, 10007, 1233, 10005, 1345, 68689, 2, 1566, 2345, 4555, 5666, 5888, 7889, 8888,
             8990, 9000, 9100, 10000, 10001, 10003, 21111, 100, 10004, 10006, 11000,
             11111, 12222, 13111, 1111, 15555, 22222, 99, 85675675};
+
+    public static void print(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+        System.out.println();
+    }
 }
