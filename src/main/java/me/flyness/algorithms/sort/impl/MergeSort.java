@@ -29,11 +29,16 @@ public class MergeSort extends AbstractSort {
     public void merge(int[] array, int left, int middle, int right) {
         int i = left;
         int j = middle + 1;
+
+        System.out.println(i + " :: " + j + " :: " + right);
         int[] aux = new int[array.length];
 
         for (int k = left; k <= right; k++) {
             aux[k] = array[k];
         }
+
+        System.out.print("aux: ");
+        Ints.print(aux);
 
         for (int k = left; k <= right; k++) {
             if (i > middle)
@@ -48,9 +53,10 @@ public class MergeSort extends AbstractSort {
 
 
         Ints.print(array);
+        System.out.println();
     }
 
     public static void main(String[] args) {
-        run(new MergeSort(), new int[]{399, 43, 5, 999, 888, 56});
+        run(new MergeSort(), new int[]{399, 43, 5, 999, 888, 56, 9999, 9});
     }
 }
